@@ -1,0 +1,28 @@
+<router-outlet></router-outlet>
+<div class="container">
+<div class="trip-input">
+  <div *ngFor="let trip of trips; let i = index" class="trip-row">
+    <mat-form-field appearance="outline" class="trip-field">
+      <mat-label>Start Point</mat-label>
+      <input matInput [(ngModel)]="trip.start">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="trip-field">
+      <mat-label>End Point</mat-label>
+      <input matInput [(ngModel)]="trip.end">
+    </mat-form-field>
+     
+  </div>
+  <button mat-raised-button (click)="addTrip()">Add Trip</button>
+</div>
+ 
+<div class="trip-visualization">
+  <ng-container *ngFor="let segment of tripSegments">
+    <div class="segment" [ngClass]="segment.level">
+      <span>{{ segment.start }} → {{ segment.end }}</span>
+      <span *ngIf="segment.type === 'continued'">—</span>
+      <span *ngIf="segment.type === 'non-continued'">→</span>
+      <span *ngIf="segment.type === 'same'">⇅</span>
+    </div>
+  </ng-container>
+</div>
+</div>

@@ -1,0 +1,56 @@
+.container {
+max-width: 800px;
+margin: 20px;
+display: flex;
+flex-direction: column;
+gap: 24px;
+justify-self: center;
+padding:16px;
+}
+
+.trip-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 20%;
+  
+}
+.trip-visualization {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.trip-field {
+flex: 1;
+min-width: 120px;
+display: flex;
+flex-direction: column;
+}
+.segment {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.level-1 {
+  background-color: #e0f7fa;
+}
+.level-2 {
+  background-color: #ffe0b2;
+}
+button{
+   background-color: brown !important;
+    border-radius: 6px;
+    padding: 2%;
+    color: white !important;
+    width: 140px;
+}
+
+input{
+        border-radius: 6px;
+    border: 1px solid lightblue;
+    height: 32px;
+}
+
+.trip-input{
+    justify-items: center;
+}
